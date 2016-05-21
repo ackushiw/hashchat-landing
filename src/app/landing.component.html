@@ -3,7 +3,7 @@
     <div class="mdl-layout__header-row">
       <img class="header-logo" src="hashchatlogo.svg" alt="hashchat logo">
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
+      <nav class="mdl-navigation mdl-layout--large-screen-only hide-xs">
         <a href="#" class="mdl-navigation__link text-white">About</a>
         <a href="#" class="mdl-navigation__link text-white">Blog</a>
         <a href="#" class="mdl-navigation__link text-white">Privacy</a>
@@ -32,7 +32,7 @@
               d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
           </svg>
         </a>
-        <a href="#" class="mdl-navigation__link">
+        <a href="#" class="mdl-navigation__link hide-xs">
           <!-- pinterest -->
           <svg style="width:24px;height:24px" viewBox="0 0 24 24">
             <path
@@ -41,18 +41,15 @@
           </svg>
         </a>
       </nav>
-      <button id="btnMenuMore"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">more_vert</i>
-      </button>
-
-      <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-          for="btnMenuMore">
-        <li class="mdl-menu__item">About</li>
-        <li class="mdl-menu__item">Blog</li>
-        <li class="mdl-menu__item">Privacy</li>
-        <li class="mdl-menu__item">Terms</li>
-      </ul>
+      <div class="dropdown hide-lg">
+        <a href="#" class="dropbtn mdl-button mdl-button--icon"><i class="material-icons">more_vert</i></a>
+        <div class="dropdown-content">
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
     </div>
   </header>
   <main class="mdl-layout__content">
@@ -61,9 +58,7 @@
         <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-phone">
           <section id="mainContent" class="content-container">
             <h1>HashChat</h1>
-          <pre>
-            {{title}}
-          </pre>
+            <br>
           <p>"Continue the Conversation"</p>
           <p>about your favorite topics, posts and personalities with free, instant hashtag forums.</p>
           <br>
@@ -71,10 +66,11 @@
           </a>
           </section>
       </div>
-        <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
-          <section id="phoneViews">
-            <img src="images/iphone.png" alt="hashchat screen" style="width:50%;">
-          </section>
+        <div id="phoneViews" class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
+
+            <img class="phone-left" src="images/iphone.png" alt="hashchat screen">
+            <img class="phone-middle" src="images/iphone.png" alt="hashchat screen">
+            <img class="phone-right" src="images/iphone.png" alt="hashchat screen">
         </div>
       </div>
     </div>
