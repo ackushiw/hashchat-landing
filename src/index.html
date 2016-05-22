@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HashChat</title>
     <meta name="author" content="HashChat">
-    <meta name="description" content="HashChat – Connect the thoughts">
+    <meta name="description" content="HashChat – Continue the Conversation">
     <meta name="keywords" content="HashChat,hashtag,chat">
     <base href="/">
     {{content-for 'head'}}
@@ -33,6 +33,28 @@
     <meta name="theme-color" content="#e91e63">
     <link rel="stylesheet" href="global-style.css">
     <!-- <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script> -->
+    <!-- facebook meta -->
+    <meta property="og:url" content="https://itunes.apple.com/app/hashchat-hashtag-group-chat/id1008197240"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="HashChat – Continue the Conversation"/>
+    <meta property="og:description" content="The fastest, eaasiest way to create topical conversation groups."/>
+    <meta property="og:image" content="https://s4.mzstatic.com/us/r30/Purple69/v4/e9/78/9e/e9789eb4-aefd-a6d9-c961-5388b1543c68/screen322x572.jpeg"/>
+    <!-- facebook meta end -->
+    <!-- twitter share meta -->
+    <meta name="twitter:card" content="app">
+    <meta name="twitter:site" content="@HashChatHQ">
+    <meta name="twitter:description" content="The fastest, eaasiest way to create topical conversation groups.">
+    <meta name="twitter:app:country" content="US">
+    <meta name="twitter:app:name:iphone" content="HashChat - Topical Group Chat">
+    <meta name="twitter:app:id:iphone" content="1008197240">
+    <!-- <meta name="twitter:app:url:iphone" content="cannonball://poem/5149e249222f9e600a7540ef"> -->
+    <meta name="twitter:app:name:ipad" content="HashChat - Topical Group Chat">
+    <meta name="twitter:app:id:ipad" content="1008197240">
+    <!-- <meta name="twitter:app:url:ipad" content="cannonball://poem/5149e249222f9e600a7540ef"> -->
+    <!-- <meta name="twitter:app:name:googleplay" content="HashChat - Topical Group Chat">
+    <meta name="twitter:app:id:googleplay" content="io.fabric.samples.cannonball">
+    <meta name="twitter:app:url:googleplay" content="http://cannonball.fabric.io/poem/5149e249222f9e600a7540ef"> -->
+    <!-- twitter share meta end -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Service worker support is disabled by default.
@@ -93,7 +115,9 @@
               </a>
             </nav>
             <div class="dropdown hide-lg">
-              <a href="#" class="dropbtn mdl-button mdl-button--icon"><i class="material-icons">more_vert</i></a>
+              <a href="#" class="dropbtn mdl-button mdl-button--icon">
+                <i class="material-icons">more_vert</i>
+              </a>
               <div class="dropdown-content">
                 <a href="#">About</a>
                 <a href="#">Blog</a>
@@ -110,18 +134,17 @@
                 <section id="mainContent" class="content-container">
                   <h1>HashChat</h1>
                   <br>
-                <p>"Continue the Conversation"</p>
-                <p>about your favorite topics, posts and personalities with free, instant hashtag forums.</p>
-                <br>
-                <a href="https://itunes.apple.com/app/hashchat-hashtag-group-chat/id1008197240" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect image-button" title="Download on the Apple Store">
-                </a>
+                  <p>"Continue the Conversation"</p>
+                  <p>about your favorite topics, posts and personalities with free, instant hashtag forums.</p>
+                  <br>
+                  <a href="https://itunes.apple.com/app/hashchat-hashtag-group-chat/id1008197240" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect image-button" title="Download on the Apple Store"></a>
                 </section>
-            </div>
+              </div>
               <div id="phoneViews" class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
 
-                  <img class="phone-left" src="images/iphone.png" alt="hashchat screen">
-                  <img class="phone-middle" src="images/iphone.png" alt="hashchat screen">
-                  <img class="phone-right" src="images/iphone.png" alt="hashchat screen">
+                <img class="phone-left" src="images/iphone.png" alt="hashchat screen">
+                <img class="phone-middle" src="images/iphone.png" alt="hashchat screen">
+                <img class="phone-right" src="images/iphone.png" alt="hashchat screen">
               </div>
             </div>
           </div>
@@ -129,7 +152,7 @@
         </main>
         <hr>
       </div>
-      </landing-app>
+    </landing-app>
 
     <script src="vendor/es6-shim/es6-shim.js"></script>
     <script src="vendor/reflect-metadata/Reflect.js"></script>

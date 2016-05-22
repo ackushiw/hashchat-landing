@@ -1,3 +1,4 @@
+@import "colors";
 .header-logo {
   padding: 16px;
 }
@@ -163,10 +164,32 @@ div.dropdown {
     text-decoration: none;
     display: block;
     text-align: left;
+    font-size: 16px;
+    &:hover{
+      background-color: #e91e63;
+      color: white;
+    }
 }
-
-.dropdown-content a:hover {background-color: #f1f1f1}
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+.social-icon{
+  fill: $socialIconsDefaultColor;
+}
+
+.twitter:hover{
+  fill: $colorTwitter;
+}
+.facebook:hover{
+  fill: $colorFacebook;
+}
+.instagram:hover{
+  fill: $colorInstagram;
+}
+.tumblr:hover{
+  fill: $colorTumblr;
+}
+.pinterest:hover{
+  fill: $colorPinsterest;
 }
