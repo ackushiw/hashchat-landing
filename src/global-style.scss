@@ -3,7 +3,7 @@
   padding: 16px;
 }
 .text-white {
-  color: white;
+  color: $textWhiteSecondary !important;
 }
 .icon-white {
   fill:white;
@@ -69,12 +69,13 @@ header{
   min-height: 200px;
   overflow: hidden;
   margin: 0;
+  margin-top: auto;
   img{
 
     position:relative;
     left:50%;
     margin-left:-25%;
-    margin-bottom: -160px;
+    margin-bottom: -60px;
     width: 29%;
     vertical-align: bottom;
   }

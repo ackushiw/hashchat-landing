@@ -1,5 +1,6 @@
 {
 	"name": "HashChat",
+	"short_name": "HashChat",
 	"icons": [
 		{
 			"src": "\/android-chrome-36x36.png",
