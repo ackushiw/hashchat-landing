@@ -18,6 +18,8 @@
 
   "files": [
     "main.ts",
+    "system-config.ts",
+    "/app/+admin/admin.component.ts",
     "typings.d.ts"
   ]
 }

@@ -1,0 +1,30 @@
+.admin-page{
+  height: 100vh;
+
+}
+.bg-black{
+  background-color: black;
+}
+.invisible{
+  opacity: 0;
+}
+.admin-login{
+  div{
+    margin: 0 auto;
+    width: 320px;
+    padding: 16px;
+    input{
+      width: 100%;
+    }
+    .auth-input{
+      width: 100%;
+    }
+    .google-button{
+      width: 100%;
+    }
+    .btn-password-submit{
+      right:  0;
+      margin-left: auto;
+    }
+  }
+}

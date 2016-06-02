@@ -1,3 +1,87 @@
-<h1>
-  admin works!
-</h1>
+<md-sidenav-layout class="admin-page" [ng-class]="{'bg-black': !auth}">
+  <md-sidenav #start [ng-class]="{'invisible': !auth}">
+    <br>
+    <br>
+    <ul class="sidenav-menu">
+      <li>
+        <div>
+          <a href="">Content Editor</a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="">Instagram Manager</a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="">test</a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="">test</a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="">test</a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="">Sign Out</a>
+        </div>
+      </li>
+    </ul>
+    <button md-button #mybutton (click)="start.close()">Close</button>
+  </md-sidenav>
+  <md-sidenav #end align="end" [ng-class]="{'invisible': !auth}">
+    End Sidenav.
+    <button md-button (click)="end.close()">Close</button>
+  </md-sidenav>
+  <button (click)="start.open()">OPEN</button>
+  <div *ngIf="auth">
+    <md-tab-group>
+      <md-tab><template md-tab-label>Content</template>
+        <template md-tab-content>
+          <h3>Edit Landing</h3>
+          <md-input placeholder="Subheading" type="text"  maxLength="100" [(ngModel)]="subVal" (change)="updateSubtitleText(subtitle)"></md-input>
+          <md-input placeholder="Description" accent maxLength="300" type="text" [(ngModel)]="descVal" #localTest>
+          </md-input>
+          <!-- <button md-raised-button (click)="updateLanding(subVal, localTest.)">Save</button> -->
+        </template>
+      </md-tab>
+      <md-tab>
+        <template md-tab-label>Website Feed</template>
+        <template md-tab-content>
+
+        </template>
+      </md-tab>
+      <md-tab>
+        <template md-tab-label>Instagram Account</template>
+        <template md-tab-content></template>
+      </md-tab>
+    </md-tab-group>
+  </div>
+  <div *ngIf="!auth" class="admin-login">
+    <div>
+      <md-card class="login-card">
+      <img class="admin-logo" src="hashchatlogo.svg" alt="Admin">
+      <h3 class="">Welcome</h3>
+      <br>
+      <p class="">Please log in</p>
+      <br>
+      <button class="google-button" md-raised-button (click)="googleLogin()">Login with Google</button>
+      <br>
+      <br>
+      <hr>
+      <md-input placeholder="Email" type="email"  maxLength="100" class="auth-input email-input " #emailInput></md-input>
+      <md-input placeholder="Password" accent maxLength="100" class="auth-input password-input " type="password" #passwordInput>
+        <md-hint align="end">{{passwordInput.characterCount}}/ min 8 </md-hint>
+      </md-input>
+      <button md-raised-button (click)="passwordLogin()" class="btn-password-submit">Login</button>
+      </md-card>
+    </div>
+  </div>
+</md-sidenav-layout>

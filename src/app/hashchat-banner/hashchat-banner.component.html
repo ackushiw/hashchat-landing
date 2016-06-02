@@ -24,7 +24,5 @@
 </main>
 
 <hr>
-<md-grid-list cols="3" >
-   <md-grid-tile *ngFor="let post of imagePosts | async"><img class="instagram-image" src="{{post.imgUrl}}" alt="{{post.title}}">
-   </md-grid-tile>
-</md-grid-list>
+
+<instagram-feed class="mdl-layout__content feed"></instagram-feed>

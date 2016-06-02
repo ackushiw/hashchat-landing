@@ -3,8 +3,7 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-  firebase: 'vendor/firebase/lib/firebase-web.js',
-  angularfire2: 'vendor/angularfire2',
+  firebase: 'vendor/firebase',
   '@angular2-material': 'vendor/@angular2-material'
 };
 
@@ -12,14 +11,18 @@ const materialPkgs:string[] = [
   'core',
   'button',
   'card',
+  'input',
+  'sidenav',
+  'slide-toggle',
+  'tabs',
   'grid-list',
 ];
 
 /** User packages configuration. */
 const packages: any = {
-  angularfire2: {
+  firebase: {
     defaultExtension: 'js',
-    main: 'angularfire2.js'
+    main: 'firebase.js'
   }
 };
 
@@ -49,6 +52,7 @@ const barrels: string[] = [
   'app/shared',
   'app/instagram-feed',
   'app/+admin',
+  'app/hashchat-banner',
   /** @cli-barrel */
 ];
 

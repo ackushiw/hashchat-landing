@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AdminComponent } from './+admin';
 import { Routes, Route, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';
 
+import { HashchatBannerComponent } from './hashchat-banner/hashchat-banner.component';
 import { InstagramFeedComponent } from './instagram-feed/instagram-feed.component';
 
 @Component({
@@ -10,6 +11,7 @@ import { InstagramFeedComponent } from './instagram-feed/instagram-feed.componen
   templateUrl: 'landing.component.html',
   styleUrls: ['landing.component.css'],
   directives: [
+    HashchatBannerComponent,
     InstagramFeedComponent,
     ROUTER_DIRECTIVES ],
   providers: [ ROUTER_PROVIDERS ]
@@ -17,9 +19,12 @@ import { InstagramFeedComponent } from './instagram-feed/instagram-feed.componen
 @Routes([
   {
     path: '/admin',
-    // name: 'Admin',
     component: AdminComponent
- }
+  },
+  {
+    path: '/',
+    component: InstagramFeedComponent
+  }
 ])
 export class LandingAppComponent {
   title = 'landing works!';
