@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgClass } from '@angular/common';
 import { AdminComponent } from './+admin';
 import { Routes, Route, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';
 
@@ -11,6 +12,7 @@ import { InstagramFeedComponent } from './instagram-feed/instagram-feed.componen
   templateUrl: 'landing.component.html',
   styleUrls: ['landing.component.css'],
   directives: [
+    NgClass,
     HashchatBannerComponent,
     InstagramFeedComponent,
     ROUTER_DIRECTIVES ],
@@ -28,4 +30,13 @@ import { InstagramFeedComponent } from './instagram-feed/instagram-feed.componen
 ])
 export class LandingAppComponent {
   title = 'landing works!';
+  menuOpen : boolean;
+
+  constructor(){
+    this.menuOpen = false;
+  }
+  toggleMenu = function() {
+    this.menuOpen = !this.menuOpen;
+    console.log(this.menuOpen);
+  }
 }

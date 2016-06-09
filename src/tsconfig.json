@@ -19,6 +19,7 @@
   "files": [
     "main.ts",
     "system-config.ts",
+    "/app/landing.component.ts",
     "/app/+admin/admin.component.ts",
     "typings.d.ts"
   ]

@@ -1,3 +1,53 @@
 .logo-link{
   display: block;
 }
+header{
+  position: fixed;
+  height: 56px;
+  -webkit-transition: height 1s; /* Safari */
+  transition: height 1s;
+  .mobile-menu{
+    opacity: 0;
+    -webkit-transition: opacity 1s; /* Safari */
+    transition: opacity 1s;
+  }
+}
+@media screen and (max-width: 600px) {
+  header{
+    .mobile-toggle-menu{
+      position: fixed;
+      padding: 16px;
+      right: 0;
+      /* Firefox */
+-moz-transition: all 1s ease;
+/* WebKit */
+-webkit-transition: all 1s ease;
+/* Opera */
+-o-transition: all 1s ease;
+/* Standard */
+transition: all 1s ease;
+    }
+    .header-logo{
+      padding: 8px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .mobile-menu{
+      padding: 16px;
+    }
+
+  }
+  header.opened{
+    height: 100vh;
+    z-index: 100;
+    .mobile-toggle-menu{
+      -ms-transform: rotate(225deg); /* IE 9 */
+    -webkit-transform: rotate(225deg); /* Safari */
+    transform: rotate(225deg);
+    }
+    .mobile-menu{
+      opacity: 1;
+    }
+
+  }
+}
