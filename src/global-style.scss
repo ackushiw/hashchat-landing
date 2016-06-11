@@ -1,4 +1,5 @@
 @import "colors";
+@import "animations";
 .header-logo {
   padding: 16px;
 }
@@ -91,25 +92,83 @@ header{
 hr{
   margin:0;
 }
+.logo-link{
+  display: block;
+}
+header{
+  position: fixed;
+  height: 56px;
+  z-index: 100;
+  -webkit-transition: height 1s; /* Safari */
+  transition: height 1s;
+  .mobile-menu{
+    opacity: 0;
+    width: 100%;
+    padding: 16px;
+    -webkit-transition: opacity 1s; /* Safari */
+    transition: opacity 1s;
+  }
+}
 @media screen and (max-width: 600px) {
-    .div.header-row{
-      padding: 0 16px 0 16px !important;
+  .div.header-row{
+    padding: 0 16px 0 16px !important;
+  }
+  .header-logo{
+    margin-left: -56px;
+  }
+  .hide-xs{
+    display: none !important;
+  }
+  .show-xs{
+    display: block;
+  }
+  #mainContent{
+    h1{
+      font-size: 150%;
+    }
+  }
+  header{
+    .mobile-toggle-menu{
+      position: fixed;
+      opacity: 0;
+      // padding: 16px;
+      // margin-right: 16px;
+      top: 8px;
+      right: 16px;
+      /* Firefox */
+-moz-transition: all 1s ease;
+/* WebKit */
+-webkit-transition: all 1s ease;
+/* Opera */
+-o-transition: all 1s ease;
+/* Standard */
+transition: all 1s ease;
     }
     .header-logo{
-      margin-left: -56px;
+      padding: 8px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .hide-xs{
-      display: none !important;
+    .mobile-menu{
+      padding: 16px;
     }
-    .show-xs{
-      display: block;
+
+  }
+  header.opened{
+    height: 100vh;
+    z-index: 100;
+    .mobile-toggle-menu{
+      -ms-transform: rotate(225deg); /* IE 9 */
+    -webkit-transform: rotate(225deg); /* Safari */
+    transform: rotate(225deg);
     }
-    #mainContent{
-      h1{
-        font-size: 150%;
-      }
+    .mobile-menu{
+      opacity: 1;
     }
+
+  }
 }
+
 @media screen and (min-width: 480px) {
 
     #phoneViews{
@@ -191,4 +250,11 @@ div.dropdown {
 }
 .pinterest:hover{
   fill: $colorPinsterest;
+}
+a.app-store-button{
+  height: 40px;
+  width: 135px;
+  background-image: url('images/Download_on_the_App_Store_Badge_US-UK_135x40.svg');
+  margin-top: 8px;
+  margin-bottom: 16px;
 }

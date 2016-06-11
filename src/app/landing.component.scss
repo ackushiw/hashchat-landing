@@ -1,53 +1,105 @@
-.logo-link{
+@import "../colors";
+$animationTiming: 0.7s;
+.logo-link {
   display: block;
 }
-header{
+header {
   position: fixed;
   height: 56px;
-  -webkit-transition: height 1s; /* Safari */
-  transition: height 1s;
-  .mobile-menu{
+  -webkit-transition: height $animationTiming;
+  /* Safari */
+  transition: height $animationTiming;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  button {
+    // background-color: black;
+    // border-radius: 50%;
+    // border: none;
+  }
+  .mobile-menu {
     opacity: 0;
-    -webkit-transition: opacity 1s; /* Safari */
-    transition: opacity 1s;
+    z-index: -1;
+    position: absolute;;
+    width: 100%;
+    -webkit-transition: all $animationTiming ease-in-out;
+    /* Safari */
+    transition: all $animationTiming ease-in-out;
+    h4{
+      color: $textWhite;
+      margin-top: 16px;
+    }
+    .mdl-grid{
+      width: 100%;
+      margin-top: 8px;
+      &.social{
+        a.social-icon{
+          margin-left: 25% !important;
+          margin-right: 25% !important;
+        }
+      }
+      &.footer{
+        position: fixed;
+        bottom: 0;
+      }
+    }
   }
 }
 @media screen and (max-width: 600px) {
-  header{
-    .mobile-toggle-menu{
+  header {
+    .mobile-toggle-menu {
       position: fixed;
-      padding: 16px;
-      right: 0;
+      opacity: 1;
+      z-index: 100;
+      // padding: 16px;
       /* Firefox */
--moz-transition: all 1s ease;
-/* WebKit */
--webkit-transition: all 1s ease;
-/* Opera */
--o-transition: all 1s ease;
-/* Standard */
-transition: all 1s ease;
+      -moz-transition: all $animationTiming;
+      /* WebKit */
+      -webkit-transition: all $animationTiming;
+      /* Opera */
+      -o-transition: all $animationTiming;
+      /* Standard */
+      transition: all $animationTiming;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-timing-function: ease-in-out;
     }
-    .header-logo{
+    .header-logo {
       padding: 8px;
+      z-index: 100;
+      height: 48px;
+      width: 48px;
+      margin-top: 0;
       margin-left: auto;
       margin-right: auto;
+      /* Firefox */
+      -moz-transition: all $animationTiming;
+      /* WebKit */
+      -webkit-transition: all $animationTiming;
+      /* Opera */
+      -o-transition: all $animationTiming;
+      /* Standard */
+      transition: all $animationTiming;
     }
-    .mobile-menu{
+    .mobile-menu {
       padding: 16px;
     }
-
   }
-  header.opened{
+  header.opened {
     height: 100vh;
     z-index: 100;
-    .mobile-toggle-menu{
-      -ms-transform: rotate(225deg); /* IE 9 */
-    -webkit-transform: rotate(225deg); /* Safari */
-    transform: rotate(225deg);
+    .header-logo{
+      margin-top: 56px;
+      height: 70px;
+      width: 70px;
     }
-    .mobile-menu{
+    .mobile-toggle-menu {
+      -ms-transform: rotate(225deg);
+      /* IE 9 */
+      -webkit-transform: rotate(225deg);
+      /* Safari */
+      transform: rotate(225deg);
+    }
+    .mobile-menu {
       opacity: 1;
     }
-
   }
 }

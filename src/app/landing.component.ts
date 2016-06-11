@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import { AdminComponent } from './+admin';
 import { Routes, Route, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';
 
@@ -15,6 +16,7 @@ import { InstagramFeedComponent } from './instagram-feed/instagram-feed.componen
     NgClass,
     HashchatBannerComponent,
     InstagramFeedComponent,
+    MD_BUTTON_DIRECTIVES,
     ROUTER_DIRECTIVES ],
   providers: [ ROUTER_PROVIDERS ]
 })
