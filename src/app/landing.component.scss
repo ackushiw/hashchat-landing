@@ -81,7 +81,15 @@ header {
       transition: all $animationTiming;
     }
     .mobile-menu {
-      padding: 16px;
+      .content-container{
+        h4 {
+          margin-left: 16px;
+        }
+      }
+      .app-store-button{
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
   header.opened {
