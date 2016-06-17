@@ -1,5 +1,6 @@
 @import "../colors";
-$animationTiming: 0.7s;
+@import "../animations";
+$animationTiming: 0.35s;
 .logo-link {
   display: block;
 }
@@ -9,8 +10,8 @@ header {
   -webkit-transition: height $animationTiming;
   /* Safari */
   transition: height $animationTiming;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: $material-motion-onscreen;
+  transition-timing-function: $material-motion-onscreen;
   button {
     // background-color: black;
     // border-radius: 50%;
@@ -21,9 +22,9 @@ header {
     z-index: -1;
     position: absolute;;
     width: 100%;
-    -webkit-transition: all $animationTiming ease-in-out;
+    -webkit-transition: all $animationTiming $material-motion-onscreen;
     /* Safari */
-    transition: all $animationTiming ease-in-out;
+    transition: all $animationTiming $material-motion-onscreen;
     h4{
       color: $textWhite;
       margin-top: 16px;
@@ -59,8 +60,8 @@ header {
       -o-transition: all $animationTiming;
       /* Standard */
       transition: all $animationTiming;
-      -webkit-transition-timing-function: ease-in-out;
-      transition-timing-function: ease-in-out;
+      -webkit-transition-timing-function: $material-motion-onscreen;
+      transition-timing-function: $material-motion-onscreen;
     }
     .header-logo {
       padding: 8px;
