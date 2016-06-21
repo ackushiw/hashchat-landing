@@ -6,7 +6,7 @@
     <meta name="author" content="HashChat">
     <meta name="description" content="HashChat – Continue the Conversation">
     <meta name="keywords" content="HashChat,hashtag,chat">
-    <base href="/">
+    <base href=".">
     {{content-for 'head'}}
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="manifest" href="/manifest.webapp">
@@ -70,7 +70,7 @@
   -->
   </head>
   <body>
-    <landing-app>
+    <app-root>
       <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header" style="background-color:#000;" [ngClass]="{'opened': menuOpen}">
           <button md-icon-button  (click)="toggleMenu()" class="hide-lg mobile-toggle-menu"><img src="./images/plus.svg" alt="menu"></button>
@@ -171,7 +171,7 @@
         <hr>
         <!-- <div id="h2hshop"></div> -->
       </div>
-    </landing-app>
+    </app-root>
 
     <script src="vendor/es6-shim/es6-shim.js"></script>
     <script src="vendor/reflect-metadata/Reflect.js"></script>
