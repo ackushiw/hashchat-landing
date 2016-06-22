@@ -26,8 +26,7 @@ li {
 }
 h1 {
   display: block;
-  font-size: 300%;
-  width: 55%;
+  font-size: 7vw;
   margin-right: none;
   font-weight: 600;;
 }
@@ -52,7 +51,12 @@ main{
   padding-top: 64px;
   width: 100%;
   overflow: hidden !important;
+
 }
+section.about, section.policy, section.privacy{
+  margin-top: 64px;
+}
+
 .main-view{
   margin-top: 5%;
   margin-left: 5%;
@@ -226,6 +230,13 @@ transition: all 1s ease;
     }
   }
 
+  div.section{
+    width: 64%;
+    margin-top: 64px;
+    margin: 0 auto;
+    padding: 16px !important;
+  }
+
   .hide-lg{
     display: none !important;
   }
@@ -262,6 +273,14 @@ transition: all 1s ease;
 }
 
 @media screen and (min-width: 1280px) {
+  div.section{
+    width: 34%;
+  }
+  section.about, section.policy, section.privacy{
+    h1{
+      font-size: 4vw;
+    }
+  }
   #mainContent{
     h1{
       font-size: 700%;
@@ -308,4 +327,53 @@ a.app-store-button{
   background-image: url('images/Download_on_the_App_Store_Badge_US-UK_135x40.svg');
   margin-top: 8px;
   margin-bottom: 16px;
+}
+
+.page-content{
+  position: relative;
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: grey;
+  overflow: hidden !important;
+  border-width: 0 0 1px 0;
+  margin: 0;
+  padding: 0 16px;
+}
+#mainContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1{
+      font-size: 16vw
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+  .page-content{
+    padding: 0 5%;
+  }
+  .landing-container{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: row;
+    .cell1{
+      width: 40%;
+    }
+    .phone-views{
+      display: inline-block;
+      width: 60%;
+    }
+    .content-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    #mainContent{
+      h1{
+        font-size: 7vw;
+      }
+    }
+  }
 }

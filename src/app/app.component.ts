@@ -26,4 +26,9 @@ export class AppComponent {
     this.menuOpen = !this.menuOpen;
     console.log(this.menuOpen);
   }
+  onNavHome() {
+    if (this.menuOpen) {
+      this.menuOpen = false;  
+    }
+  }
 }

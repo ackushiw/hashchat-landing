@@ -53,6 +53,9 @@ const barrels: string[] = [
   'app/instagram-feed',
   'app/+admin',
   'app/hashchat-banner',
+  'app/+about',
+  'app/+terms',
+  'app/+privacy',
   /** @cli-barrel */
 ];
 

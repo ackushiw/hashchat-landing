@@ -1,0 +1,62 @@
+section.policy {
+  width: 100%;
+}
+
+section.policy>div.section{
+  padding: 0 16px 0 32px;
+}
+
+section.policy h1 {
+    padding-top: 8px 0;
+    line-height: 90%;
+
+}
+
+section.policy p {
+    color: #000
+}
+
+section.policy h4 {
+    color: #000;
+    padding-bottom: 1rem
+}
+
+section.policy p,section.policy ul,section.policy ol,section.policy li {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0
+}
+
+section.policy p {
+    padding-bottom: 1rem
+}
+
+section.policy li {
+    padding-bottom: .33rem
+    margin: 4px;
+}
+
+section.policy ul li {
+    list-style-type: none;
+    text-indent: -1rem
+}
+
+section.policy ul,section.policy ol {
+    padding-bottom: 2rem
+}
+
+section.policy ul li:before {
+    content: "\2794";
+    width: 1rem;
+    display: inline-block;
+    text-align: center
+}
+
+section.policy div#footer {
+    position: static;
+    padding-top: 5%
+}
+
+section.policy div#footer a {
+    color: #000
+}

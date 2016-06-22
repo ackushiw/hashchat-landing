@@ -7,7 +7,9 @@
     <meta name="description" content="HashChat – Continue the Conversation">
     <meta name="keywords" content="HashChat,hashtag,chat">
     <base href=".">
-    {{content-for 'head'}}
+    {{#unless environment.production}}
+      <script src="/ember-cli-live-reload.js" type="text/javascript"></script>
+    {{/unless}}
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="manifest" href="/manifest.webapp">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -168,7 +170,6 @@
           </div>
 
         </main>
-        <hr>
         <!-- <div id="h2hshop"></div> -->
       </div>
     </app-root>
