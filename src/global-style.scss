@@ -64,8 +64,11 @@ section.about, section.policy, section.privacy{
 }
 #mainContent{
   height: 100%;
+  display: -webkit-flex; /* Safari */
   display: flex;
+  -webkit-flex-direction: column; /* Safari */
   flex-direction: column;
+  -webkit-justify-content: center; /* Safari */
   justify-content: center;
   h1{
     width: 100%;
@@ -90,8 +93,11 @@ section.about, section.policy, section.privacy{
   overflow: hidden;
   margin: 0;
   margin-top: auto;
+  display: -webkit-flex; /* Safari */
   display: flex;
+  -webkit-flex-direction: row; /* Safari */
   flex-direction: row;
+  -webkit-justify-content: center; /* Safari */
   justify-content: center;
   .phone{
     position: absolute;
@@ -341,8 +347,11 @@ a.app-store-button{
 }
 #mainContent {
     height: 100%;
+    display: -webkit-flex; /* Safari */
     display: flex;
+    -webkit-flex-direction: column; /* Safari */
     flex-direction: column;
+    -webkit-justify-content: center; /* Safari */
     justify-content: center;
     h1{
       font-size: 16vw
@@ -356,7 +365,9 @@ a.app-store-button{
   }
   .landing-container{
     min-height: 50vh;
+    display: -webkit-flex; /* Safari */
     display: flex;
+    -webkit-flex-direction: row; /* Safari */
     flex-direction: row;
     .cell1{
       width: 40%;
@@ -366,8 +377,11 @@ a.app-store-button{
       width: 60%;
     }
     .content-container{
+      display: -webkit-flex; /* Safari */
       display: flex;
+      -webkit-flex-direction: row; /* Safari */
       flex-direction: row;
+      -webkit-justify-content: center; /* Safari */
       justify-content: center;
     }
     #mainContent{
