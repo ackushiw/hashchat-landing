@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { APP_SHELL_DIRECTIVES } from '@angular/app-shell';
 import { NgClass } from '@angular/common';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { Router, ActivatedRoute, ROUTER_DIRECTIVES } from '@angular/router';
 
 @Component({
   moduleId: module.id,
@@ -10,7 +9,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
   template: `<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header" style="background-color:#000;" [ngClass]="{'opened': menuOpen}">
       <button md-icon-button  (click)="toggleMenu()" class="hide-lg mobile-toggle-menu"><img src="./images/plus.svg" alt="menu"></button>
-      <img (click)="onNavHome()" class="header-logo hide-lg" src="hashchatlogo.svg" alt="hashchat logo">
+      <img (click)="onNavHome()"  class="header-logo hide-lg" src="hashchatlogo.svg" alt="hashchat logo">
       <div class="mdl-layout__header-row hide-xs">
         <a [routerLink]="['/']" class="logo-link"><img class="header-logo" src="hashchatlogo.svg" alt="hashchat logo"></a>
         <div class="mdl-layout-spacer"></div>
@@ -67,16 +66,16 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
       </div>
       <div class="mobile-menu">
         <div class="content-container">
-          <a href="http://hashch.at/about.html">
+          <a [routerLink]="['/about']" (click)="toggleMenu()">
             <h4>About</h4>
           </a>
           <a href="http://hashchatapp.tumblr.com">
             <h4>Blog</h4>
           </a>
-          <a href="http://hashch.at/terms.html">
+          <a [routerLink]="['/terms']" (click)="toggleMenu()">
             <h4>Terms</h4>
           </a>
-          <a href="http://hashch.at/privacy.html">
+          <a [routerLink]="['/privacy']" (click)="toggleMenu()">
             <h4>Privacy</h4>
           </a>
 
@@ -128,12 +127,12 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
           </div>
       </div>
     </header>
+
   <router-outlet></router-outlet>
   </div>
 `,
   styleUrls: ['app.component.css'],
   directives: [
-    APP_SHELL_DIRECTIVES,
     NgClass,
     MD_BUTTON_DIRECTIVES,
     ROUTER_DIRECTIVES
@@ -144,7 +143,7 @@ export class AppComponent {
   title = 'app works!';
   menuOpen : boolean;
 
-  constructor(){
+  constructor(private route: ActivatedRoute, private router: Router){
     this.menuOpen = false;
   }
   toggleMenu = function() {
@@ -152,6 +151,7 @@ export class AppComponent {
     console.log(this.menuOpen);
   }
   onNavHome() {
+    this.router.navigate(['/']);
     if (this.menuOpen) {
       this.menuOpen = false;
     }
