@@ -1,4 +1,5 @@
 import { provideRouter, RouterConfig } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
 
 import { AdminComponent } from './+admin';
 import { AboutComponent } from './+about';
@@ -16,5 +17,6 @@ export const routes: RouterConfig = [
 ];
 
 export const APP_ROUTER_PROVIDERS = [
-  provideRouter(routes)
+  provideRouter(routes),
+  {provide: APP_BASE_HREF, useValue: '/'}
 ]
